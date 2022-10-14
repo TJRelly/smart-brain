@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "clarifai": "^2.9.1",
     "gh-pages": "^4.0.0"
   }
 }
