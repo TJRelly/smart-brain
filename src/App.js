@@ -6,6 +6,7 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import ParticlesBg from 'particles-bg'
+import SignIn from './components/SignIn/SignIn';
 
 
 class App extends Component {
@@ -19,13 +20,13 @@ class App extends Component {
   }
 
   calculateFaceLocation = (data) => {
-    const clarifaiFace =
-      JSON.parse(data, null, 2)
-        .outputs[0].data.regions[0]
-        .region_info.bounding_box;
     const image = document.getElementById("inputimage");
     const width = Number(image.width);
     const height = Number(image.height);
+    const clarifaiFace = JSON
+      .parse(data, null, 2)
+      .outputs[0].data.regions[0]
+      .region_info.bounding_box;
     return {
       leftCol: clarifaiFace.left_col * width,
       topRow: clarifaiFace.top_row * height,
@@ -77,9 +78,7 @@ class App extends Component {
 
     fetch(`https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs`, requestOptions)
       .then(response => response.text())
-      .then(result =>
-        this.displayFaceBox(this.calculateFaceLocation(result))
-      )
+      .then(result => this.displayFaceBox(this.calculateFaceLocation(result)))
       .catch(error => console.log('error', error));
 
   }
@@ -96,13 +95,16 @@ class App extends Component {
             bg={true} />
         </>
         <Navigation />
+        <SignIn />
         <Logo />
         <Rank />
         <ImageLinkForm
           onInputChange={this.onInputChange}
           onSubmit={this.onSubmit}
         />
-        <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
+        <FaceRecognition
+          box={this.state.box}
+          imageUrl={this.state.imageUrl} />
       </div>
     );
   }
