@@ -7,6 +7,7 @@ import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import ParticlesBg from 'particles-bg'
 import SignIn from './components/SignIn/SignIn';
+import Register from './components/Register/Register';
 
 
 class App extends Component {
@@ -100,15 +101,20 @@ class App extends Component {
             bg={true} />
         </>
         <Navigation onRouteChange={this.onRouteChange} />
-        {this.state.route === 'signin'
-          ? <SignIn onRouteChange={this.onRouteChange} />
-          : <><Logo /><Rank />
+        {this.state.route === 'home'
+          ? <><Logo /><Rank />
             <ImageLinkForm
               onInputChange={this.onInputChange}
               onSubmit={this.onSubmit} />
             <FaceRecognition
               box={this.state.box}
               imageUrl={this.state.imageUrl} /></>
+          : (
+            this.state.route === 'signin'
+            ? <SignIn onRouteChange={this.onRouteChange} />
+            : <Register onRouteChange={this.onRouteChange} />
+          )
+          
         }
       </div>
     );
