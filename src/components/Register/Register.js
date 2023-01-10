@@ -26,9 +26,6 @@ const Register = ({ onRouteChange }) => {
                             value="Sign In"
                         />
                     </div>
-                    <div className="lh-copy mt3">
-                        <a href="#0" className="f5 link dim black db">Register</a>
-                    </div>
                 </form>
             </main>
         </article>
