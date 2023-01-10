@@ -16,7 +16,12 @@ class App extends Component {
       input: '',
       imageUrl: '',
       box: {},
+      route: 'signin'
     }
+  }
+
+  onRouteChange = (route) => {
+    this.setState({ route: route })
   }
 
   calculateFaceLocation = (data) => {
@@ -90,21 +95,21 @@ class App extends Component {
           <div>...</div>
           <ParticlesBg
             color="#FFFFFF"
-            num={200}
+            num={100}
             type="cobweb"
             bg={true} />
         </>
-        <Navigation />
-        <SignIn />
-        <Logo />
-        <Rank />
-        <ImageLinkForm
-          onInputChange={this.onInputChange}
-          onSubmit={this.onSubmit}
-        />
-        <FaceRecognition
-          box={this.state.box}
-          imageUrl={this.state.imageUrl} />
+        <Navigation onRouteChange={this.onRouteChange} />
+        {this.state.route === 'signin'
+          ? <SignIn onRouteChange={this.onRouteChange} />
+          : <><Logo /><Rank />
+            <ImageLinkForm
+              onInputChange={this.onInputChange}
+              onSubmit={this.onSubmit} />
+            <FaceRecognition
+              box={this.state.box}
+              imageUrl={this.state.imageUrl} /></>
+        }
       </div>
     );
   }
