@@ -1,15 +1,27 @@
 {
   "files": {
     "main.css": "/smart-brain/static/css/main.1b7a79f4.css",
+<<<<<<< HEAD
     "main.js": "/smart-brain/static/js/main.4a7033aa.js",
     "static/js/496.c811c5d0.chunk.js": "/smart-brain/static/js/496.c811c5d0.chunk.js",
     "index.html": "/smart-brain/index.html",
     "main.1b7a79f4.css.map": "/smart-brain/static/css/main.1b7a79f4.css.map",
     "main.4a7033aa.js.map": "/smart-brain/static/js/main.4a7033aa.js.map",
+=======
+    "main.js": "/smart-brain/static/js/main.71e9d92d.js",
+    "static/js/496.c811c5d0.chunk.js": "/smart-brain/static/js/496.c811c5d0.chunk.js",
+    "index.html": "/smart-brain/index.html",
+    "main.1b7a79f4.css.map": "/smart-brain/static/css/main.1b7a79f4.css.map",
+    "main.71e9d92d.js.map": "/smart-brain/static/js/main.71e9d92d.js.map",
+>>>>>>> 41812b8 (changed favicon)
     "496.c811c5d0.chunk.js.map": "/smart-brain/static/js/496.c811c5d0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b7a79f4.css",
+<<<<<<< HEAD
     "static/js/main.4a7033aa.js"
+=======
+    "static/js/main.71e9d92d.js"
+>>>>>>> 41812b8 (changed favicon)
   ]
 }
