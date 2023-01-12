@@ -11,10 +11,6 @@ Smart Brain is a web app that uses the Clarifai API to locate a face in a pictur
 - Multiple-Face Detection
 - Redesign incorporating Tailwind inspired by [Markelca](https://github.com/MarkelCA/smart-brain)
 
-*Coming soon:*
-- [ ] Node & Express Backend server to manage the users.
-- [ ] MongoDB database to store the user's info.
-
 ### Challenges: 
 This ZTM project was not a straight forward tutorial. The original project uses deprecated components that the learner is expected to correct. The API documentation had completely changed since the making of the original project. I was able to implement the face detection after after extensively searching the internet for answers. Using the same process, I incorporated multiple-face detection as oposed to the single face detection of the original project. Additionally, I selected different npm components based on ease of use, clarity of documentation, and cleaness of code.  These factors should make maintanence easier and quicker.
 
@@ -27,4 +23,8 @@ You can find the project website here: [Smart Brain](https://tjrelly.github.io/s
 <p><b>App Demo:<b></p>
 <img src='https://user-images.githubusercontent.com/76633510/122643412-f9c3b780-d10f-11eb-9927-a0b649ee41fb.png' width='60%'/>
 </div>
+
+  *Coming soon:*
+- [ ] Node & Express Backend server to manage the users.
+- [ ] MongoDB database to store the user's info.
 
