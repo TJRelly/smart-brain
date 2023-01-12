@@ -3,9 +3,9 @@
 Smart Brain is a web app that uses the Clarifai API to locate a face in a picture. This face-recognition app uses the following technologies:
 
 - [MERN stack](https://www.mongodb.com/mern-stack): MongoDB, Express, React, and Node
-- [Tailwind](https://tailwindcss.com/): As CSS Framework for the styles
-- [react-parallax-tilt](https://www.npmjs.com/package/react-parallax-tilt): For the tiling [animation](https://codesandbox.io/s/73rqoq599j?fontsize=14&file=/src/index.js:0-27) on the logo
-- [particles.js](https://www.npmjs.com/package/react-tsparticles): For the background [animations](https://vincentgarreau.com/particles.js/) and interactivity.
+- [Tailwind](https://tailwindcss.com/): as CSS Framework for the styles
+- [react-parallax-tilt](https://www.npmjs.com/package/react-parallax-tilt): for the tilting animation on the logo
+- [particles-bg](https://www.npmjs.com/package/particles-bg): for the background animation
 
 ### Changes to original ZTM-project: 
 - Multiple-Face Detection
