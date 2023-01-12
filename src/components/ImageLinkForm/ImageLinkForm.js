@@ -9,7 +9,7 @@ const ImageLinkForm = ({ onInputChange, onSubmit }) => {
             <div id="search-div" className="sm:w-full md:w-3/5  m-auto shadow-xl p-4">
                 <div className="w-full flex justify-center" autoComplete="off">
                     <input
-                        id='search-field' type="text" placeholder="Copy link address here..."
+                        id='search-field' type="text" placeholder="Copy image address here..."
                         className='p-2 mr-1 text-gray-600 w-3/4' onChange={onInputChange} />
                     <button className="
                         pointer
