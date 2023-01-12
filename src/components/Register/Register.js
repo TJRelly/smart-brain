@@ -37,7 +37,7 @@ const Register = ({ onRouteChange }) => {
                     Already have an account?
                     <button className="text-lg no-underline border-b text-blue-700 transition duration-200 hover:border-blue-700 text-blue ml-2" href="../login/" onClick={() => onRouteChange('signin')}>
                         Log In
-                    </button>.
+                    </button>
                 </div>
             </div>
         </card>

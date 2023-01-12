@@ -27,8 +27,7 @@ class App extends Component {
       this.setState({ isSignedIn: false })
     } else if (route === 'home') {
       this.setState({ isSignedIn: true })
-    }
-    this.setState({ route: route })
+    } this.setState({ route: route })
   }
 
   calculateFaceLocation = data => {
@@ -99,19 +98,19 @@ class App extends Component {
   render() {
     const { isSignedIn, imageUrl, route, boxes } = this.state;
     return (
-      <div className="App" >
-        <>
-          <ParticlesBg
-            color="#FFFFFF"
-            num={100}
-            type="cobweb"
-            bg={true} />
-        </>
+      <div className="App">
+        <ParticlesBg
+          color="#FFFFFF"
+          num={100}
+          type="cobweb"
+          bg={true} />
         <Navigation
           isSignedIn={isSignedIn}
           onRouteChange={this.onRouteChange} />
         {route === 'home'
-          ? <><Logo /><Rank />
+          ? <>
+            <Logo />
+            <Rank />
             <ImageLinkForm
               onInputChange={this.onInputChange}
               onSubmit={this.onSubmit} />

@@ -30,9 +30,12 @@ const SignIn = ({ onRouteChange }) => {
 
                 <div className="text-grey-dark mt-6 bg-white px-2 py-5 rounded-lg shadow-md text-black w-full">
                     You don't have an account?
-                    <button className="text-lg no-underline border-b text-blue-700 transition duration-200 hover:border-blue-700 text-blue ml-2" href="../login/" onClick={() => onRouteChange('register')}>
+                    <button
+                        className="text-lg no-underline border-b text-blue-700 transition duration-200 hover:border-blue-700 text-blue ml-2"
+                        href="../login/"
+                        onClick={() => onRouteChange('register')}>
                         Create Account
-                    </button>.
+                    </button>
                 </div>
             </div>
         </card>
