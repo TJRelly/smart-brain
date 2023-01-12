@@ -28,7 +28,7 @@ const Register = ({ onRouteChange }) => {
                         onClick={() => onRouteChange('home')}
                         id='submit-form'
                         type="submit"
-                        className="w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white hover:bg-green-dark focus:outline-none my-1"
+                        className="white w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white hover:bg-green-dark focus:outline-none my-1"
                     >Create Account</button>
                     <p className='development'>🔧 Not implemented yet, you can pass. 🔧</p>
                 </div>

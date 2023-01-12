@@ -5,7 +5,8 @@ const SignIn = ({ onRouteChange }) => {
         <card id='signin-form' className="bg-grey-lighter flex flex-col sm:w-full h-auto m-auto">
             <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
                 <div className="px-6 py-8 rounded shadow-xl text-black w-full">
-                    <h1 className="text-white mb-8 text-3xl text-center">Log in</h1>
+                    <h1 className="text-white mb-0 text-3xl text-center"> - Smart Brain -</h1>
+                    <h1 className="text-white mb-8 mt-0 text-2xl text-center">Face-Recognition App</h1>
                     <input
                         type="text"
                         className="block border border-grey-light w-full p-3 rounded mb-4"
@@ -22,7 +23,7 @@ const SignIn = ({ onRouteChange }) => {
                         onClick={() => onRouteChange('home')}
                         id='submit-form'
                         type="submit"
-                        className="w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white hover:bg-green-dark focus:outline-none my-1"
+                        className="white w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white hover:bg-green-dark focus:outline-none my-1"
                     >Log in</button>
                     <p className='development'>🔧 Not implemented yet, you can pass. 🔧</p>
                 </div>

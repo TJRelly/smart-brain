@@ -1,9 +1,15 @@
+.button:hover {
+    background: #da59da;
+}
+
 #search-field:focus-visible {
     outline: 0;
 }
+
 #search-field:focus {
     outline: 2px solid #cc58fd;
 }
+
 #search-button:focus {
     outline: 2px solid #cc58fd;
 }
