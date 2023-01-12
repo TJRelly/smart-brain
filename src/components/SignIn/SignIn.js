@@ -32,7 +32,7 @@ const SignIn = ({ onRouteChange }) => {
                     You don't have an account?
                     <button className="text-lg no-underline border-b text-blue-700 transition duration-200 hover:border-blue-700 text-blue ml-2" href="../login/" onClick={() => onRouteChange('register')}>
                         Create Account
-                    </button>.
+                    </button>
                 </div>
             </div>
         </card>

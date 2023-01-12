@@ -6,12 +6,17 @@ const ImageLinkForm = ({ onInputChange, onSubmit }) => {
             <p className="text-lg m-3 text-white">
                 {"This Magic Brain will detect faces in your pictures. Give it a try!"}
             </p>
-            {/* <div className="border-b-2 pt-2"></div> */}
             <div id="search-div" className="sm:w-full md:w-3/5  m-auto shadow-xl p-4">
                 <div className="m-2 flex justify-center" autoComplete="off">
+                    {/* Search Field */}
                     <input
-                        id='search-field' type="text" placeholder="Copy link address here..."
-                        className='p-2 mr-1 text-gray-600 w-3/4' onChange={onInputChange} />
+                        id='search-field'
+                        type="text"
+                        placeholder="Copy link address here..."
+                        className='p-2 mr-1 text-gray-600 w-3/4'
+                        onChange={onInputChange}
+                    />
+                    {/* Detect Button */}
                     <button
                         onClick={onSubmit}
                         className="
@@ -30,8 +35,8 @@ const ImageLinkForm = ({ onInputChange, onSubmit }) => {
                         active:border-0
                         transition
                         duration-10
-                    "
-                    >Detect
+                    ">
+                        Detect
                     </button>
                 </div>
             </div>
