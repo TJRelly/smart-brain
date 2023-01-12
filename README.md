@@ -25,5 +25,5 @@ You can find the project website here: [Smart Brain](https://tjrelly.github.io/s
 
 <div align='center'>
 <p><b>App Screenshot:<b></p>
-<a href="https://tjrelly.github.io/smart-brain/">![smart brain screenshot](public/smart-brain-screenshot.png)</a>
+![smart brain screenshot](public/smart-brain-screenshot.png)(https://tjrelly.github.io/smart-brain/)
 </div>
