@@ -1,3 +1,9 @@
+.development {
+  font-style: italic;
+  color: white;
+  padding-top: .9em;
+}
+
 .App {
   text-align: center;
 }
@@ -6,7 +12,6 @@
   display: flex;
   justify-content: center;
 }
-
 
 .App-logo {
   height: 40vmin;
@@ -42,4 +47,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#image-link-form,
+#navigation,
+#face-box,
+#signup-form,
+#signin-form,
+#under-development {
+  position: relative;
+  z-index: 1000000;
 }

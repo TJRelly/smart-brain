@@ -101,7 +101,6 @@ class App extends Component {
     return (
       <div className="App" >
         <>
-          <div>...</div>
           <ParticlesBg
             color="#FFFFFF"
             num={100}

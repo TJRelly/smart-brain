@@ -1,33 +1,40 @@
+import './Siginin.css'
+
 const SignIn = ({ onRouteChange }) => {
     return (
-        <article className="br3 shadow-5 ba dark-gray b--black-10 mv3 w-100 w-50-m w-25-l mw5 center">
-            <main className="pa4 black-80">
-                <div className="measure">
-                    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                        <legend className="f2 fw6 ph0 mh0">Sign In</legend>
-                        <div className="mt3">
-                            <label className="db fw6 lh-copy f5" htmlfor="email-address">Email</label>
-                            <input className="pa2 input-reset ba bg-transparent hover-bg-white hover-black w-100" type="email" name="email-address" id="email-address" />
-                        </div>
-                        <div className="mv3">
-                            <label className="db fw6 lh-copy f5" htmlfor="password">Password</label>
-                            <input className="b pa2 input-reset ba bg-transparent hover-bg-white hover-black w-100" type="password" name="password" id="password" />
-                        </div>
-                    </fieldset>
-                    <div className="">
-                        <input
-                            onClick={() => onRouteChange('home')}
-                            className="b ph3 pv2 input-reset ba b--black bg-transparent hover-bg-white hover-black grow pointer f5 dib w-100"
-                            type="submit"
-                            value="Sign In"
-                        />
-                    </div>
-                    <div className="lh-copy mt3">
-                        <p onClick={() => onRouteChange('register')} className="f5 link dim black db pointer">Register</p>
-                    </div>
+        <card id='signin-form' className="bg-grey-lighter flex flex-col sm:w-full h-auto m-auto">
+            <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+                <div className="px-6 py-8 rounded shadow-xl text-black w-full">
+                    <h1 className="text-white mb-8 text-3xl text-center">Log in</h1>
+                    <input
+                        type="text"
+                        className="block border border-grey-light w-full p-3 rounded mb-4"
+                        name="email"
+                        placeholder="Email" />
+
+                    <input
+                        type="password"
+                        className="block border border-grey-light w-full p-3 rounded mb-4"
+                        name="password"
+                        placeholder="Password" />
+
+                    <button
+                        onClick={() => onRouteChange('home')}
+                        id='submit-form'
+                        type="submit"
+                        className="w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white hover:bg-green-dark focus:outline-none my-1"
+                    >Log in</button>
+                    <p className='development'>🔧 Not implemented yet, you can pass. 🔧</p>
                 </div>
-            </main>
-        </article>
+
+                <div className="text-grey-dark mt-6 bg-white px-2 py-5 rounded-lg shadow-md text-black w-full">
+                    You don't have an account?
+                    <button className="text-lg no-underline border-b text-blue-700 transition duration-200 hover:border-blue-700 text-blue ml-2" href="../login/" onClick={() => onRouteChange('register')}>
+                        Create Account
+                    </button>.
+                </div>
+            </div>
+        </card>
     )
 }
 
