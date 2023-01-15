@@ -1,6 +1,6 @@
 # SmartBrain
 
-[Smart Brain](https://tjrelly.github.io/smart-brain/) is a web app that uses the Clarifai API to locate a face in a picture. This face-recognition app uses the following technologies:
+####[Smart Brain](https://tjrelly.github.io/smart-brain/)#### is a web app that uses the Clarifai API to locate a face in a picture. This face-recognition app uses the following technologies:
 
 - [MERN stack](https://www.mongodb.com/mern-stack): MongoDB, Express, React, and Node
 - [Tailwind](https://tailwindcss.com/): CSS Framework for the styles
