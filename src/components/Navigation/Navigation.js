@@ -10,7 +10,7 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
         return (
             <nav id='navigation' className='bg-white border-b-2 border-blue-400' style={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <p onClick={() => onRouteChange('signin')} className="f5 link dim blue underline pa3 pointer">Log In</p>
-                <p onClick={() => onRouteChange('register')} className="f5 link dim blue underline pa3 pointer">Create Account</p>
+                <p onClick={() => onRouteChange('register')} className="f5 link dim blue underline pa3 pointer">Sign Up</p>
             </nav>
         )
     }

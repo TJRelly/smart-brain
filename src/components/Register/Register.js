@@ -30,7 +30,7 @@ const Register = ({ onRouteChange }) => {
                         id='submit-form'
                         type="submit"
                         className="white w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white hover:bg-green-dark focus:outline-none my-1"
-                    >Create Account
+                    >Sign Up
                     </button>
                     <p className='development'>🔧 Not implemented yet, you can pass. 🔧</p>
                 </div>
@@ -41,7 +41,7 @@ const Register = ({ onRouteChange }) => {
                         className="text-lg no-underline border-b text-blue-700 transition duration-200 hover:border-blue-700 text-blue ml-2"
                         href="../login/"
                         onClick={() => onRouteChange('signin')}>
-                        Log In
+                        Log in.
                     </button>
                 </div>
             </div>
