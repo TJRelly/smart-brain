@@ -2,7 +2,7 @@ import '../SignIn/Siginin.css'
 
 const Register = ({ onRouteChange }) => {
     return (
-        <card id='signin-form' className="bg-grey-lighter flex flex-col sm:w-full h-auto m-auto">
+        <div id='signin-form' className="bg-grey-lighter flex flex-col sm:w-full h-auto m-auto">
             <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
                 <div className="px-6 py-8 rounded shadow-xl text-black w-full">
                     <h1 className="text-white mb-8 text-3xl text-center">Create Account</h1>
@@ -11,7 +11,7 @@ const Register = ({ onRouteChange }) => {
                         type="text"
                         className="block border border-grey-light w-full p-3 rounded mb-4"
                         name="user-id"
-                        placeholder="User ID" />
+                        placeholder="Name" />
 
                     <input
                         type="text"
@@ -45,7 +45,7 @@ const Register = ({ onRouteChange }) => {
                     </button>
                 </div>
             </div>
-        </card>
+        </div>
     )
 }
 
