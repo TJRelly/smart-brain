@@ -117,6 +117,7 @@ class App extends Component {
     fetch(`https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs`, requestOptions)
       .then(response => response.text())
       .then(result => {
+        this.displayFaceBox(this.calculateFaceLocation(result))
         if (result) {
           fetch('http://localhost:3000/image', {
             method: 'PUT',
@@ -130,7 +131,6 @@ class App extends Component {
               this.setState(Object.assign(this.state.user, { entries: count }))
             })
         }
-        this.displayFaceBox(this.calculateFaceLocation(result))
       })
       .catch(error => console.log('error', error));
   }
