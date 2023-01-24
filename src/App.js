@@ -18,8 +18,27 @@ class App extends Component {
       imageUrl: '',
       boxes: [],
       route: 'signin',
-      isSignedIn: false
+      isSignedIn: false,
+      user: {
+        id: '',
+        name: '',
+        email: '',
+        entries: 0,
+        joined: ''
+      }
     }
+  }
+
+  loadUser = (data) => {
+    this.setState({
+      user: {
+        id: data.id,
+        name: data.name,
+        email: data.email,
+        entries: data.entries,
+        joined: data.joined
+      }
+    })
   }
 
   componentDidMount() {
@@ -97,9 +116,23 @@ class App extends Component {
 
     fetch(`https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs`, requestOptions)
       .then(response => response.text())
-      .then(result => this.displayFaceBox(this.calculateFaceLocation(result)))
+      .then(result => {
+        if (result) {
+          fetch('http://localhost:3000/image', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              id: this.state.user.id
+            })
+          })
+            .then(result => result.json())
+            .then(count => {
+              this.setState(Object.assign(this.state.user, { entries: count }))
+            })
+        }
+        this.displayFaceBox(this.calculateFaceLocation(result))
+      })
       .catch(error => console.log('error', error));
-
   }
 
   render() {
@@ -117,18 +150,29 @@ class App extends Component {
         {route === 'home'
           ? <>
             <Logo />
-            <Rank />
+            <Rank
+              name={this.state.user.name}
+              entries={this.state.user.entries}
+            />
             <ImageLinkForm
               onInputChange={this.onInputChange}
-              onSubmit={this.onSubmit} />
+              onSubmit={this.onSubmit}
+            />
             <FaceRecognition
               boxes={boxes}
-              imageUrl={imageUrl} />
+              imageUrl={imageUrl}
+            />
           </>
           : (
             route !== 'register'
-              ? <SignIn onRouteChange={this.onRouteChange} />
-              : <Register onRouteChange={this.onRouteChange} />
+              ? <SignIn
+                loadUser={this.loadUser}
+                onRouteChange={this.onRouteChange}
+              />
+              : <Register
+                loadUser={this.loadUser}
+                onRouteChange={this.onRouteChange}
+              />
           )
 
         }

@@ -12,7 +12,7 @@ const ImageLinkForm = ({ onInputChange, onSubmit }) => {
                     <input
                         id='search-field'
                         type="text"
-                        placeholder="Copy link address here..."
+                        placeholder="Copy image address here..."
                         className='p-2 mr-1 text-gray-600 w-3/4'
                         onChange={onInputChange}
                     />

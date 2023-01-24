@@ -28,8 +28,9 @@ class SignIn extends React.Component {
             })
         })
             .then(response => response.json())
-            .then(data => {
-                if (data === 'Success') {
+            .then(user => {
+                if (user.id) {
+                    this.props.loadUser(user)
                     this.props.onRouteChange('home')
                 }
             })
@@ -58,26 +59,27 @@ class SignIn extends React.Component {
                             placeholder="Password" />
 
                         <button
-                            onClick={this.onSubmitSignIn}
-                            id='submit-form'
-                            type="submit"
-                            className="white w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white hover:bg-green-dark focus:outline-none my-1"
+                        onClick={this.onSubmitSignIn}
+                        id='submit-form'
+                        type="submit"
+                        className="white w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white hover:bg-green-dark focus:outline-none my-1"
                         >Log in</button>
-                        <p className='development'>- Guest Log in -</p>
-                        <p className='development'>Email: guest &nbsp;&nbsp; Password: 123</p>
-                    </div>
 
-                    <div className="text-grey-dark mt-6 bg-white px-2 py-5 rounded-lg shadow-md text-black w-full">
-                        Don't have an account?
-                        <button
-                            className="text-lg no-underline border-b text-blue-700 transition duration-200 hover:border-blue-700 text-blue ml-2"
-                            href="../login/"
-                            onClick={() => onRouteChange('register')}>
-                            Create one!
-                        </button>
-                    </div>
+                    <p className='development'>- Guest Log in -</p>
+                    <p className='development'>Email: guest@gmail.com &nbsp;&nbsp; Password: 123</p>
+                </div>
+
+                <div className="text-grey-dark mt-6 bg-white px-2 py-5 rounded-lg shadow-md text-black w-full">
+                    Don't have an account?
+                    <button
+                        className="text-lg no-underline border-b text-blue-700 transition duration-200 hover:border-blue-700 text-blue ml-2"
+                        href="../login/"
+                        onClick={() => onRouteChange('register')}>
+                        Create one!
+                    </button>
                 </div>
             </div>
+            </div >
         )
     }
 }
