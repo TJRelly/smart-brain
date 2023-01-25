@@ -43,6 +43,7 @@ class Register extends React.Component {
     }
 
     render() {
+        const { onRouteChange } = this.props
         return (
             <div id='signin-form' className="bg-grey-lighter flex flex-col sm:w-full h-auto m-auto">
                 <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
@@ -88,7 +89,8 @@ class Register extends React.Component {
                         <button
                             className="text-lg no-underline border-b text-blue-700 transition duration-200 hover:border-blue-700 text-blue ml-2"
                             href="../login/"
-                            onClick={this.onSubmitSignIn}>
+                            onClick={() => onRouteChange('signin')}
+                            >
                             Log in.
                         </button>
                     </div>
