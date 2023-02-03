@@ -6,7 +6,7 @@
 - [Tailwind](https://tailwindcss.com/): CSS Framework for the styles
 - [React-Parallax-Tilt](https://www.npmjs.com/package/react-parallax-tilt): for tilting animation on logo
 - [Particles-BG](https://www.npmjs.com/package/particles-bg): For background animation
-- [Node JS] (https://nodejs.org/en/): for back-end server
+- [Node JS](https://nodejs.org/en/): for back-end server
 - [PostresSQL](https://www.postgresql.org/): for database
 - [Render](https://render.com/): for server hosting
 - [Neon](https://neon.tech/): for database hosting
