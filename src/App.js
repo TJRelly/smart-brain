@@ -9,7 +9,6 @@ import ParticlesBg from 'particles-bg'
 import SignIn from './components/SignIn/SignIn';
 import Register from './components/Register/Register';
 
-
 class App extends Component {
   constructor() {
     super();
@@ -19,6 +18,8 @@ class App extends Component {
       boxes: [],
       route: 'signin',
       isSignedIn: false,
+      loading: false,
+      setLoading: false,
       user: {
         id: '',
         name: '',
@@ -85,6 +86,7 @@ class App extends Component {
   onSubmit = () => {
     this.setState({ imageUrl: this.state.input })
 
+
     const raw = JSON.stringify({
       "user_app_id": {
         "user_id": "clarifai",
@@ -137,47 +139,49 @@ class App extends Component {
 
   render() {
     const { isSignedIn, imageUrl, route, boxes } = this.state;
-    return (
-      <div className="App" >
-        <ParticlesBg
-          color="#FFFFFF"
-          num={100}
-          type="cobweb"
-          bg={true} />
-        <Navigation
-          isSignedIn={isSignedIn}
-          onRouteChange={this.onRouteChange} />
-        {route === 'home'
-          ? <>
-            <Logo />
-            <Rank
-              name={this.state.user.name}
-              entries={this.state.user.entries}
-            />
-            <ImageLinkForm
-              onInputChange={this.onInputChange}
-              onSubmit={this.onSubmit}
-            />
-            <FaceRecognition
-              boxes={boxes}
-              imageUrl={imageUrl}
-            />
-          </>
-          : (
-            route !== 'register'
-              ? <SignIn
-                loadUser={this.loadUser}
-                onRouteChange={this.onRouteChange}
-              />
-              : <Register
-                loadUser={this.loadUser}
-                onRouteChange={this.onRouteChange}
-              />
-          )
 
-        }
-      </div>
-    );
+    return (
+      (
+        <div className="App" >
+          <ParticlesBg
+            color="#FFFFFF"
+            num={100}
+            type="cobweb"
+            bg={true} />
+          <Navigation
+            isSignedIn={isSignedIn}
+            onRouteChange={this.onRouteChange} />
+          {route === 'home'
+            ? <>
+              <Logo />
+              <Rank
+                name={this.state.user.name}
+                entries={this.state.user.entries}
+              />
+              <ImageLinkForm
+                onInputChange={this.onInputChange}
+                onSubmit={this.onSubmit}
+              />
+              <FaceRecognition
+                boxes={boxes}
+                imageUrl={imageUrl}
+              />
+            </>
+            : (
+              route !== 'register'
+                ? <SignIn
+                  loadUser={this.loadUser}
+                  onRouteChange={this.onRouteChange}
+                />
+                : <Register
+                  loadUser={this.loadUser}
+                  onRouteChange={this.onRouteChange}
+                />
+            )
+          }
+        </div>
+      )
+    )
   }
 }
 

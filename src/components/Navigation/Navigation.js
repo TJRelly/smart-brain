@@ -2,7 +2,7 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
 
     if (isSignedIn) {
         return (
-            <nav id='navigation' className='bg-white border-b-2 border-blue-400' style={{ display: 'flex', justifyContent: 'flex-end'}}>
+            <nav id='navigation' className='bg-white border-b-2 border-blue-400' style={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <p onClick={() => onRouteChange('signout')} className="f5 link dim blue pa3 pr4 pointer">Log out</p>
             </nav>
         )
