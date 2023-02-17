@@ -36,10 +36,15 @@ class SignIn extends React.Component {
             })
     }
 
+    onFormSubmit = (event) => {
+        event.preventDefault();
+        this.onSubmitSignIn()
+    };
+
     render() {
         const { onRouteChange } = this.props
         return (
-            <div id='signin-form' className="bg-grey-lighter flex flex-col sm:w-full h-auto m-auto">
+            <form onSubmit={this.onFormSubmit} id='signin-form' className="bg-grey-lighter flex flex-col sm:w-full h-auto m-auto">
                 <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
                     <div className="px-6 py-8 rounded shadow-xl text-black w-full">
                         <h1 className="text-white mb-0 text-3xl text-center"> - Smart Brain - </h1>
@@ -59,7 +64,6 @@ class SignIn extends React.Component {
                             placeholder="Password" />
 
                         <button
-                            onClick={this.onSubmitSignIn}
                             id='submit-form'
                             type="submit"
                             className="white w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white hover:bg-green-dark focus:outline-none my-1"
@@ -78,7 +82,7 @@ class SignIn extends React.Component {
                         </button>
                     </div>
                 </div>
-            </div >
+            </form>
         )
     }
 }
