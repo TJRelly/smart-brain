@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://smart-brain-api-z87p.onrender.com/')
+    fetch('http://localhost:3000')
       .then(response => response.json())
       .then(console.log)
   }
@@ -116,7 +116,7 @@ class App extends Component {
       .then(result => {
         this.displayFaceBox(this.calculateFaceLocation(result))
         if (result) {
-          fetch('https://smart-brain-api-z87p.onrender.com/image', {
+          fetch('http://localhost:3000/image', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

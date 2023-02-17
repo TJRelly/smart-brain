@@ -1,8 +1,14 @@
 import "./ImageLinkForm.css";
 
 const ImageLinkForm = ({ onInputChange, onSubmit }) => {
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        onSubmit()
+    };
+
     return (
-        <div id="image-link-form" className='z-10'>
+        <form onSubmit={onFormSubmit} id="image-link-form" className='z-10'>
             <p className="f4 mt-6 text-white">
                 {"This Magic Brain will detect faces in your pictures. Give it a try!"}
             </p>
@@ -18,7 +24,7 @@ const ImageLinkForm = ({ onInputChange, onSubmit }) => {
                     />
                     {/* Detect Button */}
                     <button
-                        onClick={onSubmit}
+                        type="submit"
                         className="
                         button
                         white
@@ -40,7 +46,7 @@ const ImageLinkForm = ({ onInputChange, onSubmit }) => {
                     </button>
                 </div>
             </div>
-        </div>
+        </form>
     )
 }
 
