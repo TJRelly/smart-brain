@@ -86,33 +86,14 @@ class App extends Component {
   onSubmit = () => {
     this.setState({ imageUrl: this.state.input })
 
-    const raw = JSON.stringify({
-      "user_app_id": {
-        "user_id": "clarifai",
-        "app_id": "main"
-      },
-      "inputs": [
-        {
-          "data": {
-            "image": {
-              "url": this.state.input
-            }
-          }
-        }
-      ]
-    });
-
-    const requestOptions = {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Authorization': 'Key dc909b76df6646348782f475407e883b'
-      },
-      body: raw
-    };
-
-    fetch(`https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs`, requestOptions)
-      .then(response => response.text())
+    fetch('https://smart-brain-api-z87p.onrender.com/imageurl', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        input: this.state.input
+      })
+    })
+      .then(response => response.json())
       .then(result => {
         this.displayFaceBox(this.calculateFaceLocation(result))
         if (result) {
@@ -130,6 +111,7 @@ class App extends Component {
         }
       })
       .catch(error => console.log('error', error));
+
   }
 
   render() {
