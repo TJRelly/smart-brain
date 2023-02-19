@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/smart-brain/static/css/main.aa950ea0.css",
-    "main.js": "/smart-brain/static/js/main.87b1b2fa.js",
+    "main.js": "/smart-brain/static/js/main.c8e7971a.js",
     "static/js/496.c811c5d0.chunk.js": "/smart-brain/static/js/496.c811c5d0.chunk.js",
     "index.html": "/smart-brain/index.html",
     "main.aa950ea0.css.map": "/smart-brain/static/css/main.aa950ea0.css.map",
-    "main.87b1b2fa.js.map": "/smart-brain/static/js/main.87b1b2fa.js.map",
+    "main.c8e7971a.js.map": "/smart-brain/static/js/main.c8e7971a.js.map",
     "496.c811c5d0.chunk.js.map": "/smart-brain/static/js/496.c811c5d0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aa950ea0.css",
-    "static/js/main.87b1b2fa.js"
+    "static/js/main.c8e7971a.js"
   ]
 }
