@@ -45,7 +45,6 @@ class App extends Component {
   componentDidMount() {
     fetch('https://smart-brain-api-z87p.onrender.com/')
       .then(response => response.json())
-      .then(console.log)
   }
 
   onRouteChange = (route) => {
@@ -142,10 +141,12 @@ class App extends Component {
           color="#FFFFFF"
           num={100}
           type="cobweb"
-          bg={true} />
+          bg={true}
+        />
         <Navigation
           isSignedIn={isSignedIn}
-          onRouteChange={this.onRouteChange} />
+          onRouteChange={this.onRouteChange}
+        />
         {route === 'home'
           ? <>
             <Logo />
@@ -173,7 +174,6 @@ class App extends Component {
                 onRouteChange={this.onRouteChange}
               />
           )
-
         }
       </div>
     );

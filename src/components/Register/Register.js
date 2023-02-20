@@ -7,7 +7,8 @@ class Register extends React.Component {
         this.state = {
             email: '',
             password: '',
-            name: ''
+            name: '',
+            loading: false
         }
     }
 
@@ -24,6 +25,7 @@ class Register extends React.Component {
     }
 
     onSubmitSignIn = () => {
+        this.setState({ loading: true })
         fetch('https://smart-brain-api-z87p.onrender.com/register', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
@@ -39,6 +41,7 @@ class Register extends React.Component {
                     this.props.loadUser(user)
                     this.props.onRouteChange('home')
                 }
+                this.setState({ loading: false })
             })
     }
 
@@ -83,7 +86,7 @@ class Register extends React.Component {
                             id='submit-form'
                             type="submit"
                             className="white w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white hover:bg-green-dark focus:outline-none my-1"
-                        >Sign Up
+                        >{this.state.loading ? <> Loading . . .</> : <>Sign up</>}
                         </button>
                         <p className='development'> - Thank you for trying our app! - </p>
                     </div>

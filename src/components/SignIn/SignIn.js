@@ -6,7 +6,8 @@ class SignIn extends React.Component {
         super(props);
         this.state = {
             signInEmail: '',
-            signInPassword: ''
+            signInPassword: '',
+            loading: false
         }
     }
 
@@ -19,6 +20,7 @@ class SignIn extends React.Component {
     }
 
     onSubmitSignIn = () => {
+        this.setState({ loading: true })
         fetch('https://smart-brain-api-z87p.onrender.com/signin', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
@@ -33,6 +35,7 @@ class SignIn extends React.Component {
                     this.props.loadUser(user)
                     this.props.onRouteChange('home')
                 }
+                this.setState({ loading: false })
             })
     }
 
@@ -67,7 +70,8 @@ class SignIn extends React.Component {
                             id='submit-form'
                             type="submit"
                             className="white w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white hover:bg-green-dark focus:outline-none my-1"
-                        >Log in</button>
+                        >{this.state.loading ? <> Loading . . .</> : <>Log in</>}
+                        </button>
                         <p className='development'>- Guest Log in -</p>
                         <p className='development'>email: guest@gmail.com &nbsp;&nbsp; Password: 123</p>
                     </div>
@@ -82,7 +86,7 @@ class SignIn extends React.Component {
                         </button>
                     </div>
                 </div>
-            </form>
+            </form >
         )
     }
 }
