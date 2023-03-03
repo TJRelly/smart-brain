@@ -8,8 +8,8 @@
 - [Particles-BG](https://www.npmjs.com/package/particles-bg): For background animation
 - [Node JS](https://nodejs.org/en/): for back-end server - code posted here: [Smart-Brain-Api](https://github.com/TJRelly/smart-brain-api)
 - [PostresSQL](https://www.postgresql.org/): for database
-- [Render](https://render.com/): server host
-- [Neon](https://neon.tech/): database host
+- [Render](https://render.com/): server hosting
+- [Neon](https://neon.tech/): database hosting
 
 ### Project Improvements: 
 - Multiple-Face Detection
