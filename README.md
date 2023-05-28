@@ -12,6 +12,7 @@
 
 ### Project Improvements: 
 - Multiple-Face Detection
+- Loading Screen
 - Redesign incorporating Tailwind inspired by [Markelca](https://github.com/MarkelCA/smart-brain)
 
 ### Challenges: 
