@@ -16,7 +16,9 @@
 - Redesign incorporating Tailwind inspired by [Markelca](https://github.com/MarkelCA/smart-brain)
 
 ### Challenges: 
-The original project uses deprecated components that the learner is expected to correct. The API documentation had completely changed since the making of the original project. I was able to implement the face detection after after extensively searching the internet for answers. Using the same process, I incorporated multiple-face detection as opposed to the single face detection of the original project. Additionally, I selected different npm components based on ease of use, clarity of documentation, and cleaness of code.  These factors should make maintanence easier and quicker.
+During the course of this project, I encountered and successfully addressed significant challenges that arose from utilizing deprecated components and adapting to transformed API documentation. I took the initiative to rectify the deprecated components, ensuring the project's compliance with current industry standards. Additionally, I invested substantial effort in researching and comprehending the updated API documentation, allowing for seamless integration with the existing codebase. By implementing face detection, I expanded the project's functionality, going beyond the single face detection capability of the original version. Furthermore, I carefully selected npm components based on criteria such as ease of use, clarity of documentation, and clean code practices. These considerations ensure improved maintainability and expedite future development processes.
+
+Throughout this project, I have demonstrated my resilience, adaptability, and resourcefulness as a software engineer. By addressing deprecated components, adapting to changing API documentation, and enhancing functionality, I have showcased my ability to overcome challenges and deliver high-quality results. This experience has enriched my skills and positioned me to contribute effectively in future projects requiring problem-solving, research, and meticulous decision-making.
 
 ### Website Deployed
 
