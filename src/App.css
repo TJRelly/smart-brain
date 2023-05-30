@@ -1,7 +1,7 @@
 .development {
   font-style: italic;
   color: white;
-  padding-top: .9em;
+  padding: .9em 0;
 }
 
 .App {
