@@ -22,7 +22,7 @@ Throughout this project, I have demonstrated my resilience, adaptability, and re
 
 ### Website Deployed
 
-You can find the project website here: [Smart Brain](https://tjrelly.github.io/smart-brain/)
+You can find the project website here: [Live Site](https://tjrelly.github.io/smart-brain/)
 
 ---
 
