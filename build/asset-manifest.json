@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/FaceScanPro/static/css/main.edb07f6d.css",
-    "main.js": "/FaceScanPro/static/js/main.c34ecfc2.js",
+    "main.css": "/FaceScanPro/static/css/main.4420dbc6.css",
+    "main.js": "/FaceScanPro/static/js/main.c966b9f3.js",
     "static/js/496.9c99363f.chunk.js": "/FaceScanPro/static/js/496.9c99363f.chunk.js",
     "index.html": "/FaceScanPro/index.html",
-    "main.edb07f6d.css.map": "/FaceScanPro/static/css/main.edb07f6d.css.map",
-    "main.c34ecfc2.js.map": "/FaceScanPro/static/js/main.c34ecfc2.js.map",
+    "main.4420dbc6.css.map": "/FaceScanPro/static/css/main.4420dbc6.css.map",
+    "main.c966b9f3.js.map": "/FaceScanPro/static/js/main.c966b9f3.js.map",
     "496.9c99363f.chunk.js.map": "/FaceScanPro/static/js/496.9c99363f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.edb07f6d.css",
-    "static/js/main.c34ecfc2.js"
+    "static/css/main.4420dbc6.css",
+    "static/js/main.c966b9f3.js"
   ]
 }
