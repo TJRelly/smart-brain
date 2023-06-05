@@ -45,6 +45,34 @@ class SignIn extends React.Component {
     this.onSubmitSignIn()
   }
 
+  onDemoAccountLogin = () => {
+    const demoEmail = "guest@gmail.com"
+    const demoPassword = "123"
+
+    this.setState({
+      signInEmail: demoEmail,
+      signInPassword: demoPassword,
+      loading: true,
+    })
+
+    fetch("https://smart-brain-api-z87p.onrender.com/signin", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: demoEmail,
+        password: demoPassword,
+      }),
+    })
+      .then((response) => response.json())
+      .then((user) => {
+        if (user.id) {
+          this.props.loadUser(user)
+          this.props.onRouteChange("home")
+        }
+        this.setState({ loading: false })
+      })
+  }
+
   render() {
     const { onRouteChange } = this.props
 
@@ -90,21 +118,26 @@ class SignIn extends React.Component {
               <button
                 id="submit-form"
                 type="submit"
-                className="white w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white hover:bg-green-dark focus:outline-none my-3"
+                className="white w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white focus:outline-none my-2"
               >
-                {this.state.loading ? <>Logging in . . .</> : <>Log in</>}
+                Log in
               </button>
 
-              <p className="development pb0">- Demo log in -</p>
-              <p className="development">
-                email: guest@gmail.com &nbsp;&nbsp; Password: 123
-              </p>
+              <p className="development">- or -</p>
+
+              <button
+                type="button"
+                className="demo-btn my-2 white w-full text-center py-3 rounded"
+                onClick={this.onDemoAccountLogin}
+              >
+                Demo Account Log in
+              </button>
             </div>
 
-            <div className="text-grey-dark mt-6 bg-white px-2 py-5 rounded-lg shadow-md text-black w-full">
+            <div className="text-grey-dark mt-6 bg-white px-4 py-5 rounded-lg shadow-md text-black w-full">
               Don't have an account?
               <button
-                className="text-lg no-underline border-b text-blue-700 transition duration-200 hover:border-blue-700 text-blue ml-2"
+                className="text-lg no-underline border-b text-blue-700 transition duration-200 hover:border-blue-700 text-blue ml-2 ease-in"
                 href="../login/"
                 onClick={() => onRouteChange("register")}
               >

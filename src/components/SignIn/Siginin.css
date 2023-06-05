@@ -12,14 +12,16 @@ input::placeholder {
   color: gray;
 }
 
-#signin-form #submit-form {
+#signin-form #submit-form,
+.demo-btn {
   background: #bdbdbd;
   background-image: linear-gradient(298deg, #001fffba, #0250ff4a);
-  transition: 0.2s;
+  transition: background 0.75s ease;
 }
 
 #submit-form:hover,
-#submit-form:focus {
+#submit-form:focus,
+.demo-btn:hover {
   background: #001fffba;
   background: linear-gradient(298deg, #bdbdbd, #0250ff4a) !important;
 }
