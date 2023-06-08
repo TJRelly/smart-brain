@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/FaceScanPro/static/css/main.4420dbc6.css",
-    "main.js": "/FaceScanPro/static/js/main.c966b9f3.js",
-    "static/js/496.9c99363f.chunk.js": "/FaceScanPro/static/js/496.9c99363f.chunk.js",
-    "index.html": "/FaceScanPro/index.html",
-    "main.4420dbc6.css.map": "/FaceScanPro/static/css/main.4420dbc6.css.map",
-    "main.c966b9f3.js.map": "/FaceScanPro/static/js/main.c966b9f3.js.map",
-    "496.9c99363f.chunk.js.map": "/FaceScanPro/static/js/496.9c99363f.chunk.js.map"
+    "main.css": "/smart-brain/static/css/main.4420dbc6.css",
+    "main.js": "/smart-brain/static/js/main.9d02ce1f.js",
+    "static/js/496.9c99363f.chunk.js": "/smart-brain/static/js/496.9c99363f.chunk.js",
+    "index.html": "/smart-brain/index.html",
+    "main.4420dbc6.css.map": "/smart-brain/static/css/main.4420dbc6.css.map",
+    "main.9d02ce1f.js.map": "/smart-brain/static/js/main.9d02ce1f.js.map",
+    "496.9c99363f.chunk.js.map": "/smart-brain/static/js/496.9c99363f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4420dbc6.css",
-    "static/js/main.c966b9f3.js"
+    "static/js/main.9d02ce1f.js"
   ]
 }

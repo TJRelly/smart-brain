@@ -94,10 +94,10 @@ class SignIn extends React.Component {
             <div className="px-6 py-8 rounded shadow-xl text-black w-full">
               <h1 className="text-white mb-0 text-3xl text-center">
                 {" "}
-                - Face Scan Pro -{" "}
+                - Smart Brain -{" "}
               </h1>
               <h1 className="text-white mb-8 mt-0 text-2xl text-center">
-                Face-Recognition App
+                Face-Detection App
               </h1>
               <input
                 onChange={this.onEmailChange}
