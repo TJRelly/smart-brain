@@ -84,6 +84,7 @@ class SignIn extends React.Component {
         textColor="#ffffff"
         logoSrc=""
         text="Loading your content..."
+        className="text-xl w-fit mx-auto backdrop-blur-sm"
       >
         <form
           onSubmit={this.onFormSubmit}
