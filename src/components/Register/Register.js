@@ -63,7 +63,7 @@ class Register extends React.Component {
                 text='Loading your content...'
             ><form onSubmit={this.onFormSubmit} id='signin-form' className="bg-grey-lighter flex flex-col sm:w-full h-auto m-auto">
                     <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
-                        <div className="px-6 py-8 rounded shadow-xl text-black w-full">
+                        <div className="px-6 py-8 rounded shadow-xl text-black w-full backdrop-blur-sm">
                             <h1 className="text-white mb-8 text-3xl text-center">Create Account</h1>
 
                             <input
