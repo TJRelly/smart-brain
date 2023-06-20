@@ -22,7 +22,7 @@ class SignIn extends React.Component {
 
   onSubmitSignIn = () => {
     this.setState({ loading: true })
-    fetch("https://smart-brain-api-z87p.onrender.com/signin", {
+    fetch("https://reindeer-tux.cyclic.app/signin", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -55,7 +55,7 @@ class SignIn extends React.Component {
       loading: true,
     })
 
-    fetch("https://smart-brain-api-z87p.onrender.com/signin", {
+    fetch("https://reindeer-tux.cyclic.app/signin", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

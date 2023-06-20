@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://smart-brain-api-z87p.onrender.com/").then((response) =>
+    fetch("https://reindeer-tux.cyclic.app/").then((response) =>
       response.json()
     )
   }
@@ -117,7 +117,7 @@ class App extends Component {
         console.log(result)
         this.displayFaceBox(this.calculateFaceLocation(result))
         if (result) {
-          fetch("https://smart-brain-api-z87p.onrender.com/image", {
+          fetch("https://reindeer-tux.cyclic.app/image", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
