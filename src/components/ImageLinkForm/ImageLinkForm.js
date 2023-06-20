@@ -11,7 +11,10 @@ const ImageLinkForm = ({ onInputChange, onSubmit }) => {
       <p className="f4 mt-6 text-white backdrop-blur-sm w-fit mx-auto">
         {"This Magic Brain will detect faces in your pictures. Give it a try!"}
       </p>
-      <div id="search-div" className="sm:w-full md:w-3/5  mx-auto my-6 shadow-xl p-2 backdrop-blur-sm w-fit">
+      <div
+        id="search-div"
+        className="sm:w-full md:w-3/5  mx-auto my-6 shadow-xl p-2 backdrop-blur-sm w-fit"
+      >
         <div className="m-2 flex justify-center" autoComplete="off">
           {/* Search Field */}
           <input
