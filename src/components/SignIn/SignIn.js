@@ -119,7 +119,7 @@ class SignIn extends React.Component {
               <button
                 id="submit-form"
                 type="submit"
-                className="white w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white focus:outline-none my-2"
+                className="white w-full text-center py-3 rounded bg-blue-600 text-gray-800 hover:text-white focus:text-white focus:outline-none my-2 tracking-wide"
               >
                 Log in
               </button>
@@ -128,7 +128,7 @@ class SignIn extends React.Component {
 
               <button
                 type="button"
-                className="demo-btn my-2 white w-full text-center py-3 rounded"
+                className="demo-btn my-2 white w-full text-center py-3 rounded tracking-wide"
                 onClick={this.onDemoAccountLogin}
               >
                 Demo Account Log in

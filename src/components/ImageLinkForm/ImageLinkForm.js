@@ -27,7 +27,7 @@ const ImageLinkForm = ({ onInputChange, onSubmit }) => {
           {/* Detect Button */}
           <button
             type="submit"
-            className="white pointer p-2 m-auto w-1/4 bg-blue-400 hover:text-white hover:bg-[#da59da] ease-in duration-200"
+            className="white pointer p-2 m-auto w-1/4 bg-blue-400 hover:text-white hover:bg-[#da59da] ease-in duration-200 tracking-wide"
           >
             Detect
           </button>

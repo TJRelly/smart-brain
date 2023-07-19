@@ -83,34 +83,38 @@ class App extends Component {
   onSubmit = () => {
     this.setState({ imageUrl: this.state.input })
 
-    const raw = JSON.stringify({
-      user_app_id: {
-        user_id: "clarifai",
-        app_id: "main",
-      },
-      inputs: [
-        {
-          data: {
-            image: {
-              url: this.state.input,
+    const returnClarifaiRequestOptions = (imageUrl) => {
+      const raw = JSON.stringify({
+        user_app_id: {
+          user_id: "clarifai",
+          app_id: "main",
+        },
+        inputs: [
+          {
+            data: {
+              image: {
+                url: imageUrl,
+              },
             },
           },
+        ],
+      })
+  
+      const requestOptions = {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          Authorization: "Key dc909b76df6646348782f475407e883b",
         },
-      ],
-    })
+        body: raw,
+      }
 
-    const requestOptions = {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        Authorization: "Key dc909b76df6646348782f475407e883b",
-      },
-      body: raw,
+      return requestOptions
     }
 
     fetch(
-      `https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs`,
-      requestOptions
+      `https://api.clarifai.com/v2/models/face-detection/outputs`,
+      returnClarifaiRequestOptions(this.state.input)
     )
       .then((response) => response.text())
       .then((result) => {

@@ -14,7 +14,7 @@ const Logo = () => {
                 glareColor="#64B5F6"
                 glarePosition="all">
                 <div>
-                    <img src={brain} alt='brain'></img>
+                    <img src={brain} alt='brain'/>
                 </div>
             </Tilt>
         </div>
