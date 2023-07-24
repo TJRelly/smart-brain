@@ -5,13 +5,13 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
     return (
       <nav
         id="navigation"
-        className="flex justify-between bg-white border-b-2 border-blue-400 px-8"
+        className="flex justify-between bg-white border-b-2 border-blue-400 px-4 sm:px-8"
       >
         <section className="flex gap-1 self-center">
           <img src={brain} alt="brain" className="h-14 self-center" />
           <p
             onClick={() => onRouteChange("signout")}
-            className="text-2xl link blue py-4 pointer"
+            className="text-xl link blue py-4 pointer"
           >
             Smart Brain
           </p>
@@ -29,13 +29,13 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
     return (
       <nav
         id="navigation"
-        className="flex justify-between bg-white border-b-2 border-blue-400 px-12"
+        className="flex justify-between bg-white border-b-2 border-blue-400 px-4 sm:px-16"
       >
         <section className="flex gap-1 self-center">
           <img src={brain} alt="brain" className="h-14 self-center" />
           <p
             onClick={() => onRouteChange("signout")}
-            className="text-2xl link blue py-4 pointer"
+            className="text-lg sm:text-xl link blue py-4 pointer"
           >
             Smart Brain
           </p>
@@ -44,13 +44,13 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
         <section className="flex gap-4 self-center">
           <p
             onClick={() => onRouteChange("signin")}
-            className="f5 link dim blue px-2 pointer m-auto"
+            className="text-sm sm:text-lg link dim blue px-1 sm:px-3 pointer m-auto"
           >
             Log in
           </p>
           <button
             onClick={() => onRouteChange("register")}
-            className="f5 white font-semibold tracking-wide link dim px-6 pointer bg-blue-500 text-white py-3 rounded"
+            className="text-sm sm:text-lg white font-semibold tracking-wide link dim px-6 pointer bg-blue-500 text-white py-2 rounded"
           >
             Sign up
           </button>
