@@ -28,6 +28,8 @@ You can find the project website here: [Live Site](https://tjrelly.github.io/sma
 ---
 ### Screenshots
 
+![smart-brain-ui](https://github.com/TJRelly/smart-brain/assets/94482664/ba44177e-1a76-4842-8ffc-9918e88b2b92)
+
 ### Multi-face detection
 ![smart-brain-screenshot](https://github.com/TJRelly/smart-brain/assets/94482664/182176a5-be00-4894-9d8c-01ff0979179b)
 
