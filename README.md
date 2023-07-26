@@ -19,7 +19,7 @@
 ### Challenges: 
 During the course of this project, I encountered and successfully addressed significant challenges that arose from utilizing deprecated components and adapting to updated API documentation. I took the initiative to rectify the deprecated components, ensuring the project's compliance with current industry standards. Additionally, I invested substantial effort in researching and comprehending the updated API documentation, allowing for seamless integration with the existing codebase. By implementing multiple face detection, I expanded the project's functionality, going beyond the single face detection capability of the original version.
 
-Throughout this project, I have demonstrated my resilience, adaptability, and resourcefulness as a software engineer. By addressing deprecated components, adapting to changing API documentation, and enhancing functionality, I have showcased my ability to overcome challenges and deliver high-quality results. This experience has enriched my skills and positioned me to contribute effectively in future projects requiring problem-solving, research, and meticulous decision-making.
+Throughout this project, I have demonstrated my resilience, adaptability, and resourcefulness as a software engineer. By addressing deprecated components, adapting to changing API documentation, and enhancing functionality, I have showcased my ability to overcome challenges and deliver high-quality results. This experience has enriched my skills and positioned me to contribute effectively to future projects requiring problem-solving, research, and meticulous decision-making.
 
 ### Website Deployed
 
