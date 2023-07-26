@@ -35,3 +35,8 @@ You can find the project website here: [Live Site](https://tjrelly.github.io/sma
 ![Sign In](https://github.com/TJRelly/smart-brain/assets/94482664/f2d0adfd-78d3-4808-aa22-981d1b7f5579)
 ![App Interface](https://github.com/TJRelly/smart-brain/assets/94482664/55ec8ffd-7a8b-4d99-a308-848da9227708)
 ![Register](https://github.com/TJRelly/smart-brain/assets/94482664/86c7c8eb-538c-45d3-8c83-aefd232cefe6)
+
+### Website Deployed
+
+You can find the project website here: [Live Site](https://tjrelly.github.io/smart-brain/)
+
