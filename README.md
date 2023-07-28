@@ -9,6 +9,7 @@
 - [Tailwind](https://tailwindcss.com/): CSS Framework for the styles
 - [React-Parallax-Tilt](https://www.npmjs.com/package/react-parallax-tilt): for tilting animation on logo
 - [Particles-BG](https://www.npmjs.com/package/particles-bg): For background animation
+- [Bycrypt](https://www.npmjs.com/package/bcrypt): To encrypt passwords
 
 ### Project Improvements: 
 - Multiple-Face Detection
