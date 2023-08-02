@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://reindeer-tux.cyclic.app/").then((response) =>
+    fetch("https://real-pink-tuna-hem.cyclic.cloud").then((response) =>
       response.json()
     )
   }
@@ -121,7 +121,7 @@ class App extends Component {
         console.log(result)
         this.displayFaceBox(this.calculateFaceLocation(result))
         if (result) {
-          fetch("https://reindeer-tux.cyclic.app/image", {
+          fetch("https://real-pink-tuna-hem.cyclic.cloud/image", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

@@ -27,7 +27,7 @@ class Register extends React.Component {
 
   onSubmitSignIn = () => {
     this.setState({ loading: true })
-    fetch("https://reindeer-tux.cyclic.app/register", {
+    fetch("https://real-pink-tuna-hem.cyclic.cloud/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
