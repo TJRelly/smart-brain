@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://smart-brain-api-chi.vercel.app/api/v1").then((response) =>
+    fetch("https://smart-brain-api.up.railway.app/").then((response) =>
       response.json()
     )
   }
@@ -121,7 +121,7 @@ class App extends Component {
         console.log(result)
         this.displayFaceBox(this.calculateFaceLocation(result))
         if (result) {
-          fetch("https://smart-brain-api-chi.vercel.app/api/v1/image", {
+          fetch("https://smart-brain-api.up.railway.app/image", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
