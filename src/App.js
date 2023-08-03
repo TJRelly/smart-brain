@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://real-pink-tuna-hem.cyclic.cloud").then((response) =>
+    fetch("https://smart-brain-api-chi.vercel.app/").then((response) =>
       response.json()
     )
   }
@@ -121,7 +121,7 @@ class App extends Component {
         console.log(result)
         this.displayFaceBox(this.calculateFaceLocation(result))
         if (result) {
-          fetch("https://real-pink-tuna-hem.cyclic.cloud/image", {
+          fetch("https://smart-brain-api-chi.vercel.app/api/image", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

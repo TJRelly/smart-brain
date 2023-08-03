@@ -27,7 +27,7 @@ class Register extends React.Component {
 
   onSubmitSignIn = () => {
     this.setState({ loading: true })
-    fetch("https://real-pink-tuna-hem.cyclic.cloud/register", {
+    fetch("https://smart-brain-api-chi.vercel.app/api/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
