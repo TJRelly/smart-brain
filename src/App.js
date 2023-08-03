@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://smart-brain-api-chi.vercel.app/").then((response) =>
+    fetch("https://smart-brain-api-chi.vercel.app/api").then((response) =>
       response.json()
     )
   }
