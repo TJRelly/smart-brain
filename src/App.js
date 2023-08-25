@@ -83,56 +83,75 @@ class App extends Component {
   onSubmit = () => {
     this.setState({ imageUrl: this.state.input })
 
-    const returnClarifaiRequestOptions = (imageUrl) => {
-      const raw = JSON.stringify({
-        user_app_id: {
-          user_id: "clarifai",
-          app_id: "main",
-        },
-        inputs: [
-          {
-            data: {
-              image: {
-                url: imageUrl,
-              },
-            },
-          },
-        ],
-      })
-  
-      const requestOptions = {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          Authorization: "Key dc909b76df6646348782f475407e883b",
-        },
-        body: raw,
-      }
+    // const returnClarifaiRequestOptions = (imageUrl) => {
+    //   const raw = JSON.stringify({
+    //     user_app_id: {
+    //       user_id: "clarifai",
+    //       app_id: "main",
+    //     },
+    //     inputs: [
+    //       {
+    //         data: {
+    //           image: {
+    //             url: imageUrl,
+    //           },
+    //         },
+    //       },
+    //     ],
+    //   })
 
-      return requestOptions
-    }
+    //   const requestOptions = {
+    //     method: "POST",
+    //     headers: {
+    //       Accept: "application/json",
+    //       Authorization: "Key dc909b76df6646348782f475407e883b",
+    //     },
+    //     body: raw,
+    //   }
 
-    fetch(
-      `https://api.clarifai.com/v2/models/face-detection/outputs`,
-      returnClarifaiRequestOptions(this.state.input)
-    )
-      .then((response) => response.text())
-      .then((result) => {
-        console.log(result)
-        this.displayFaceBox(this.calculateFaceLocation(result))
-        if (result) {
-          fetch("https://smart-brain-api.up.railway.app/image", {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              id: this.state.user.id,
-            }),
-          })
-            .then((result) => result.json())
-            .then((count) => {
-              this.setState(Object.assign(this.state.user, { entries: count }))
-            })
-        }
+    //   return requestOptions
+    // }
+
+    //   fetch(
+    //     `https://api.clarifai.com/v2/models/face-detection/outputs`,
+    //     returnClarifaiRequestOptions(this.state.input)
+    //   )
+    //     .then((response) => response.text())
+    //     .then((result) => {
+    //       console.log(result)
+    //       this.displayFaceBox(this.calculateFaceLocation(result))
+    //       if (result) {
+    //         fetch("https://smart-brain-api.up.railway.app/image", {
+    //           method: "PUT",
+    //           headers: { "Content-Type": "application/json" },
+    //           body: JSON.stringify({
+    //             id: this.state.user.id,
+    //           }),
+    //         })
+    //           .then((result) => result.json())
+    //           .then((count) => {
+    //             this.setState(Object.assign(this.state.user, { entries: count }))
+    //           })
+    //       }
+    //     })
+    //     .catch((error) => console.log("error", error))
+    // }
+
+    fetch("https://smart-brain-api.up.railway.app/image", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id: this.state.user.id,
+        imageUrl: this.state.input, // Send the image URL to the back end
+      }),
+    })
+      .then((result) => result.json())
+      .then((data) => {
+        const { entries, faceLocations } = data
+        this.setState({
+          user: { ...this.state.user, entries },
+          boxes: faceLocations,
+        })
       })
       .catch((error) => console.log("error", error))
   }
