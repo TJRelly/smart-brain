@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/").then((response) => response.json())
+    fetch("https://smart-brain-api.up.railway").then((response) => response.json())
   }
 
   onRouteChange = (route) => {
@@ -81,7 +81,7 @@ class App extends Component {
   onSubmit = () => {
     this.setState({ imageUrl: this.state.input })
 
-    fetch("http://localhost:3000/imageurl", {
+    fetch("https://smart-brain-api.up.railway/imageurl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -93,7 +93,7 @@ class App extends Component {
         console.log(result)
         this.displayFaceBox(this.calculateFaceLocation(result))
         if (result) {
-          fetch("http://localhost:3000/image", {
+          fetch("https://smart-brain-api.up.railway/image", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
