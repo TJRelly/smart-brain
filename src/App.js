@@ -81,8 +81,8 @@ class App extends Component {
   onSubmit = () => {
     this.setState({ imageUrl: this.state.input })
 
-    fetch("http://localhost:3000/imageurl", {
-      method: "post",
+    fetch("https://smart-brain-api.up.railway.app/imageurl", {
+      method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         input: this.state.input,
@@ -93,7 +93,7 @@ class App extends Component {
         console.log(result)
         this.displayFaceBox(this.calculateFaceLocation(result))
         if (result) {
-          fetch("http://localhost:3000/image", {
+          fetch("https://smart-brain-api.up.railway.app/image", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
