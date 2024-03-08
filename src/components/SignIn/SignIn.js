@@ -55,7 +55,7 @@ class SignIn extends React.Component {
       loading: true,
     })
 
-    fetch("https://smart-brain-api.up.railway.app/signin", {
+    fetch("https://smart-brain-api-gold.vercel.app/signin", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
